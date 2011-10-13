@@ -1,0 +1,10 @@
+{{extend 'layout.html'}}
+
+{{ # Write out the posts with the most recent post at the top. }}
+{{for post in posts:}}
+<div class = 'post'>
+    <h1 class = 'postTitle'>{{=post.title}}</h1>
+    <h2 class = 'postDate'>{{=post.date}}</h2>
+    <p class = 'postContent'>{{=post.content}}</p>
+</div>
+{{pass}}
