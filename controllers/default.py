@@ -16,6 +16,7 @@ def index():
             ('Resume', False, URL('resume'), []), ('Toys', False, URL('toys'), [])]
     response.title = 'Greg Bigelow'
     response.meta.author = 'Greg Bigelow'
+    response.files.append(URL(request.application, 'static/css', 'index.css'))
 
     # Return the most recent X posts to display on the page.
     allPosts = db().select(db.posts.ALL, orderby =~ db.posts.date)

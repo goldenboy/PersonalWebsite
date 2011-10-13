@@ -378,7 +378,10 @@ h5 {font-size: 1.0em;}
 h6 {font-size: 0.8em;}
 
 /*********** page layout alignment, width and padding ***********/
-/*body {background-color: #000;}*/
+body {
+    background-color: #B1BEDB;
+}
+
 #header h1 {  padding: 1.33em 0.66em 0.66em 0.66em; }
 #container, #header, #page, #content, #statusbar,
 #footer, #wrapper { display:block; line-height: 170%}
@@ -387,10 +390,18 @@ h6 {font-size: 0.8em;}
     margin: 0 auto;
     padding: 0;
 }
-#page { padding: 20px 10px 30px 10px; }
-#wrapper {margin: 0 auto;}
-#wrapper {background-color: #fff; padding: 0}
-#statusbar { margin: 0 }
+
+#page { width: 100%; }
+#wrapper {
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#statusbar {
+    margin: 0;
+    margin-top: 10px;
+}
 #footer {
     padding: 5px;
 }
@@ -734,4 +745,9 @@ a.button:hover {
 }
 .web2py_paginator ul li.current a {
     font-weight: bold !important;
+}
+
+#header {
+    background: url('../images/banner.JPG') no-repeat;
+    height:172px;
 }

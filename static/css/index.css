@@ -1,0 +1,49 @@
+/* Date ideas and parts from http://justfreetemplates.com/blog/2010/01/09/262.html. */
+
+.date {
+	background:#fff url('../images/calbackground.jpg') no-repeat scroll top left;
+	width:60px;
+	height:57px;
+	color:#FFFFFF;
+	text-align:center;
+    float: left;
+}
+
+.date .date-month {
+	height:18px;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+    width: 100%;
+}
+
+.date .date-day {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:30px;
+    padding-top: 5px;
+}
+
+.post {
+	padding-top: 20px;
+	border-bottom: 2px dashed black;
+	overflow: hidden;
+	padding-bottom: 15px;
+}
+
+.post > h1, h2 {
+	padding-right: 3px;
+	padding-left: 10px;
+}
+
+.postTitle {
+	float: left;
+	padding-left: 10px;
+	padding-top: 17px;
+}
+
+.postContent {
+	clear: left;
+	padding-top: 15px;
+	font-size: 11pt;
+	width: 500px;
+}

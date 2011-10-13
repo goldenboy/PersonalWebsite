@@ -1,10 +1,19 @@
+{{import calendar}}
 {{extend 'layout.html'}}
 
 {{ # Write out the posts with the most recent post at the top. }}
 {{for post in posts:}}
+
+{{ # Create a calendar icon. Idea from http://justfreetemplates.com/blog/2010/01/09/262.html. }}
 <div class = 'post'>
+
+<div class="date">
+    <div class="date-month">{{=calendar.month_abbr[post.date.month]}}</div>
+    <div class="date-day">{{=post.date.day}}</div>
+</div>
+
+{{ # Write out the post itself. }}
     <h1 class = 'postTitle'>{{=post.title}}</h1>
-    <h2 class = 'postDate'>{{=post.date}}</h2>
     <p class = 'postContent'>{{=post.content}}</p>
 </div>
 {{pass}}
