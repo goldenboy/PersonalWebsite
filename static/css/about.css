@@ -1,0 +1,14 @@
+.textColumn {
+	width: 400px;
+	float: left;
+	margin-right: 150px;
+}
+
+img {
+	width: 200px;
+	float: left;
+}
+
+#info {
+    margin-top: 30px;
+}

@@ -8,20 +8,25 @@
 ## - download is for downloading files uploaded in the db (does streaming)
 ## - call exposes all registered services (none by default)
 #########################################################################
-
 POST_SHOW_COUNT = 5
 
 def index():
-    response.menu = [('Home', True, URL('index'), []), ('About', False, URL('about'), []),
-            ('Resume', False, URL('resume'), []), ('Toys', False, URL('toys'), [])]
-    response.title = 'Greg Bigelow'
-    response.meta.author = 'Greg Bigelow'
     response.files.append(URL(request.application, 'static/css', 'index.css'))
-
     # Return the most recent X posts to display on the page.
     allPosts = db().select(db.posts.ALL, orderby =~ db.posts.date)
     recentPosts = allPosts[:POST_SHOW_COUNT]
     return dict(posts = recentPosts)
+
+def about():
+    response.files.append(URL(request.application, 'static/css', 'about.css'))
+    return dict()
+
+def resume():
+    response.files.append(URL(request.application, 'static/css', 'resume.css'))
+    return dict()
+
+def toys():
+    return dict()
 
 def user():
     """

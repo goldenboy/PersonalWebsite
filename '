@@ -1,0 +1,22 @@
+alias g='mvim --remote-silent'
+alias attu='ssh greg82@attu.cs.washington.edu'
+set -o vi
+export CLASSPATH=.:/Library/Java/junit4.9b2/junit-4.9b2.jar:/Library/Java/junit4.9b2/
+
+# Connect to Amazon Web Services from ec2 folder in home directory.
+alias awsconnect='ssh -v -i superkey.pem ec2-user@ec2-204-236-162-236.us-west-1.compute.amazonaws.com'
+
+# Are these important AWS things?
+export EC2_HOME=~/ec2
+export PATH=$PATH:$EC2_HOME/bin
+export EC2_PRIVATE_KEY=pk-AQ2DGH57473DWHDGGRK7Y6WQOAVRYLZD.pem
+export EC2_CERT=cert-AQ2DGH57473DWHDGGRK7Y6WQOAVRYLZD.pem
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
+
+alias dawgnostic='ssh -l cutecouple 192.168.1.12'
+
+export PATH=/usr/local/Cellar/python/2.7.2/bin:/usr/local/share/python:/usr/local/bin:$PATH
+
+# Nice colors in the terminal.
+export CLICOLOR='true'
+PS1='\[\033[1;32m\]\u@\w$ \[\033[m\]'
