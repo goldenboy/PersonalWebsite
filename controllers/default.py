@@ -58,6 +58,15 @@ def call():
     return service()
 
 @auth.requires_membership('SuperUser')
+def edit_post():
+    """ Allows for editing of the selected post. Post id passed as a query
+    parameter. 
+    """
+    post_id = request.vars['post']
+    update_form = crud.update(db.posts, post_id, next=URL('index'))
+    return dict(form=update_form)
+
+@auth.requires_membership('SuperUser')
 def data():
     """                                      
     http://..../[app]/default/data/tables
@@ -77,5 +86,5 @@ def data():
 @auth.requires_membership('SuperUser')
 def create_post():
     """ Write a new blog post. """
-    makePost = crud.create(db.posts, next = URL('index'))
-    return dict(form = makePost)
+    makePost = crud.create(db.posts, next=URL('index'))
+    return dict(form=makePost)

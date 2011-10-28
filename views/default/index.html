@@ -15,5 +15,6 @@
 {{ # Write out the post itself. }}
     <h1 class = 'postTitle'>{{=post.title}}</h1>
     <p class = 'postContent'>{{=XML(post.content)}}</p>
+    <a class='secret' href="{{=URL('edit_post', vars=dict(post=post.id))}}">edit</a>
 </div>
 {{pass}}
