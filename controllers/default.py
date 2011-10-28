@@ -25,9 +25,6 @@ def resume():
     response.files.append(URL(request.application, 'static/css', 'resume.css'))
     return dict()
 
-def toys():
-    return dict()
-
 def user():
     """
     exposes:

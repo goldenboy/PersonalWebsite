@@ -20,4 +20,4 @@ response.google_analytics_id = None
 #########################################################################
 
 response.menu = [('Home', True, URL('index'), []), ('About', False, URL('about'), []),
-        ('Resume', False, URL('resume'), []), ('Toys', False, URL('toys'), [])]
+        ('Resume', False, URL('resume'), [])] 
